@@ -49,16 +49,17 @@ function getFilm() {
       }
     },
   });
-};
+}
 
 
-$('#search-button').on('click', function () {
+$("#search-button").on("click", function () {
   getFilm();
 });
+$("#search-button").on("keyup", function (event) {
+  if (event.keyCode === 13) { //jika 13 == enter maka jika event keycode == enter maka ambil film
+    getFilm();
+  } else {
 
-$('#search-input').keypress(function(event){
-	var keycode = (event.keyCode ? event.keyCode : event.which);
-	if(keycode == '13'){
-		getFilm();
-	}
+  }
 });
+

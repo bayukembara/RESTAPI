@@ -6,8 +6,7 @@
 
 // allFilm();
 
-function getFilm() {
-  $('#daftar-film').html('');
+$("#search-button").on("click", function () {
   $.ajax({
     url: "http://www.omdbapi.com",
     type: "GET",
@@ -23,7 +22,7 @@ function getFilm() {
         $.each(film, function (i, data) {
           $("#daftar-film").append(`
           <div class="col-md-4">
-          <div class="card mb-3">
+          <div class="card">
           <img src="`+data.Poster+`" class="card-img-top" alt="...">
           <div class="card-body">
           <h5 class="card-title" style="text-weight:bold">`+data.Title+`</h5>
@@ -34,8 +33,7 @@ function getFilm() {
           </div>
           `);
         });
-
-        $('#search-input').val('');
+        console.log(film);
       } else {
         // $('#daftar-film').html('<h1 class="alert alert-danger text-center">' + data.Error + '</h1>');
         // or
@@ -49,16 +47,4 @@ function getFilm() {
       }
     },
   });
-};
-
-
-$('#search-button').on('click', function () {
-  getFilm();
-});
-
-$('#search-input').keypress(function(event){
-	var keycode = (event.keyCode ? event.keyCode : event.which);
-	if(keycode == '13'){
-		getFilm();
-	}
 });

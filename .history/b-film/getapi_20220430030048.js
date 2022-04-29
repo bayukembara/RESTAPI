@@ -6,8 +6,7 @@
 
 // allFilm();
 
-function getFilm() {
-  $('#daftar-film').html('');
+$("#search-button").on("click", function () {
   $.ajax({
     url: "http://www.omdbapi.com",
     type: "GET",
@@ -34,8 +33,7 @@ function getFilm() {
           </div>
           `);
         });
-
-        $('#search-input').val('');
+        console.log(film);
       } else {
         // $('#daftar-film').html('<h1 class="alert alert-danger text-center">' + data.Error + '</h1>');
         // or
@@ -49,16 +47,4 @@ function getFilm() {
       }
     },
   });
-};
-
-
-$('#search-button').on('click', function () {
-  getFilm();
-});
-
-$('#search-input').keypress(function(event){
-	var keycode = (event.keyCode ? event.keyCode : event.which);
-	if(keycode == '13'){
-		getFilm();
-	}
 });

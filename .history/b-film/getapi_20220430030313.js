@@ -49,16 +49,9 @@ function getFilm() {
       }
     },
   });
-};
+}
 
 
-$('#search-button').on('click', function () {
+$("#search-button").on("click", function () {
   getFilm();
-});
-
-$('#search-input').keypress(function(event){
-	var keycode = (event.keyCode ? event.keyCode : event.which);
-	if(keycode == '13'){
-		getFilm();
-	}
 });

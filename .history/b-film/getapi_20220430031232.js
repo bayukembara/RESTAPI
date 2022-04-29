@@ -55,10 +55,10 @@ function getFilm() {
 $('#search-button').on('click', function () {
   getFilm();
 });
-
-$('#search-input').keypress(function(event){
-	var keycode = (event.keyCode ? event.keyCode : event.which);
-	if(keycode == '13'){
-		getFilm();
-	}
+$('#search-button').keypress(function (e) {
+  //jika 13 == enter maka jika event keycode == enter maka ambil film
+  if (e.which === 13) {
+    getFilm();
+  };
 });
+
