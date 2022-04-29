@@ -1,0 +1,32 @@
+[
+  {
+    "nama": "Bayu Kembara",
+    "umur": 26,
+    "nip": "14120019",
+    "lulus": true,
+    "hobby": [
+      "coding",
+      "membaca",
+      "badminton"
+    ],
+    "pembimbing": {
+      "pembimbing1": "Indriani Nurlatifah",
+      "pembimbing2": "Talita Arsyta"
+    }
+  },
+  {
+    "nama": "Bayu Kembara",
+    "umur": 26,
+    "nip": "14120019",
+    "lulus": true,
+    "hobby": [
+      "coding",
+      "membaca",
+      "badminton"
+    ],
+    "pembimbing": {
+      "pembimbing1": "Indriani Nurlatifah",
+      "pembimbing2": "Talita Arsyta"
+    }
+  }
+]

@@ -3,5 +3,6 @@
   "umur":26,
   "nip":"14120019",
   "lulus":true,
-  "hobby":["coding","membaca","badminton"]
+  "hobby":["coding","membaca","badminton"],
+  "pembimbing":{}
 }
